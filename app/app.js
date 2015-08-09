@@ -4,6 +4,8 @@
 angular.module('myApp', [
   'myApp.controllers',
   'ui.router',
+  'oauthApp.services',
+  'LocalStorageModule'
 ])
 
 .run(function() {

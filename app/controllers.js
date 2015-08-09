@@ -1,6 +1,21 @@
 angular.module('myApp.controllers', [])
 
-.controller('AppCtrl', function($scope) {
+.controller('AppCtrl', function($scope, oauthService) {
+
+  oauthService.initialize();
+
+  $scope.user = null;
+
+  $scope.connectButton = function(backend) {
+      promiseB = oauthService.connectProvider(backend).then(function(data) {
+      });
+
+      promiseB.then(function(data){
+          oauthService.getCurrentUser().then(function(data){
+            $scope.user = data;
+          }); 
+      });
+  };
 
 })
 

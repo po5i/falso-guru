@@ -2,6 +2,14 @@
   <h1>Example page header <small>Subtext for header</small></h1>
 </div>
 
+<div ng-show="user">
+	<img ng-src="{{user.avatar}}"/>
+	{{user.name}}
+</div>
+
+<button type="button" class="btn btn-primary" ng-click="connectButton('facebook')">Entrar con Facebook</button>
+<button type="button" class="btn btn-danger" ng-click="connectButton('google')">Entrar con Google</button>
+
 <ul class="nav nav-pills">
   <li role="presentation"><a href="#/app/home">Inicio</a></li>
   <li role="presentation"><a href="#/app/add">Agregar</a></li>
