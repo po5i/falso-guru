@@ -5,7 +5,8 @@ angular.module('myApp', [
   'myApp.controllers',
   'ui.router',
   'oauthApp.services',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'ui.bootstrap'
 ])
 
 .run(function() {

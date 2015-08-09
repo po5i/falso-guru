@@ -6,6 +6,8 @@ angular.module('myApp.controllers', [])
 
   $scope.user = null;
 
+  $scope.rate = null;
+
   $scope.connectButton = function(backend) {
       promiseB = oauthService.connectProvider(backend).then(function(data) {
       });

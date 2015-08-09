@@ -1,1 +1,67 @@
-Informacion sobre {{slug}}
+<h1>Informacion sobre {{slug}}</h1>
+
+<h3>Quieres calificarlo?</h3>
+
+<form name="rateForm" ng-submit="rateForm.$valid && rateGuru()" novalidate>
+
+	<div>
+		Reciprocidad
+		<rating ng-model="rate.reciprocidad" max="10"></rating>
+	</div>
+
+	<div>
+		integridad
+		<rating ng-model="rate.integridad" max="10"></rating>
+	</div>
+
+	<div>
+		Primera impresión
+		<rating ng-model="rate.primera_impresion" max="10"></rating>
+	</div>
+
+	<div>
+		colaboración
+		<rating ng-model="rate.colaboracion" max="10"></rating>
+	</div>
+
+	<div>
+		startups
+		<rating ng-model="rate.startups" max="10"></rating>
+	</div>
+
+	<div>
+		videojuegos
+		<rating ng-model="rate.videojuegos" max="10"></rating>
+	</div>
+
+	<div>
+		educación
+		<rating ng-model="rate.educacion" max="10"></rating>
+	</div>
+
+	<div class="form-group">
+    	<textarea class="form-control" ng-model="rate.justificacion" rows="3" placeholder="descripción específica de 500 caracteres de porqué la calificación"></textarea>
+	</div>
+
+	
+
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" ng-model="rate.disclaimer">
+	    yo declaro que estoy siendo 100% honesto, yo no trabajo al momento para esta persona, yo no he sido pagado para poner este review
+	  </label>
+	</div>
+	
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+
+
+
+
+<h3>Resumen de la calificacion</h3>
+
+<div>...</div>
+
+<div>disqus</div>
